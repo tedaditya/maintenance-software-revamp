@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.row>* {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.form-head{
+    margin-top: 120px;
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+}
+
+.form-head h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+
+
+    color: #000000;
+    margin-top: 24px;
+}
+
+.form-content {
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+}
+
+.form-content button {
+    width: 100%;
+    background: #0d6efd;
+    border-radius: 2px;
+    margin-top: 16px;
+}
+
+.form-content label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    color: #222222;
+}
+
+.form-content input{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
