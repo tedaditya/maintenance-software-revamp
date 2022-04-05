@@ -1,0 +1,17 @@
+.wrapper{
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 32px;
+    border-radius: 20px;
+    width: 720px;
+    background-color: white;
+}
+
+.btn-submit{
+    margin-left: 16px;
+    width: 100px;
+}
+
+.button-wrapper{
+    margin-top: 32px;
+}
