@@ -19,11 +19,14 @@
     <section class="wrapper">
         <h2>FMEA ENGINEER</h2>
         <div>
-            <form action="">
+            <% if (messages.success) { %>
+                <p class="alert alert-success m2-4 mb-2"><%- messages.success %></p>
+            <% } %>  
+            <form action="/dashboard/fmeaEngineer/" method="POST">
                 <div class="mb-3">
                     <label for="komponenDataList" class="form-label">Komponen</label>
                     <input class="form-control" list="datalistOptions" id="komponenDataList"
-                        placeholder="Pilih komponen">
+                        placeholder="Pilih komponen" name="list_komponen">
                     <datalist id="datalistOptions">
                         <option value="Casing">
                         <option value="Nozzle">
@@ -39,24 +42,24 @@
                 </div>
                 <div class="mb-3">
                     <label for="fungsi" class="form-label">Fungsi</label>
-                    <textarea class="form-control" id="fungsi" rows="3"></textarea>
+                    <textarea class="form-control" id="fungsi" rows="3" name="fungsi"></textarea>
                 </div>
                 <div class="responKegagalan">
                     <div class="mb-3">
                         <label for="potensiKegagalan" class="form-label">Potensi kegagalan</label>
-                        <input type="text" class="form-control" id="potensiKegagalan">
+                        <input type="text" class="form-control" id="potensiKegagalan" name="potensi_kegagalan">
                     </div>
                     <div class="mb-3">
                         <label for="efekKegagalan" class="form-label">Efek kegagalan</label>
-                        <textarea class="form-control" id="efekKegagalan" rows="3"></textarea>
+                        <textarea class="form-control" id="efekKegagalan" rows="3" name="efek_kegagalan"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="penyebabKegagalan" class="form-label">Penyebab kegagalan</label>
-                        <textarea class="form-control" id="penyebabKegagalan" rows="3"></textarea>
+                        <textarea class="form-control" id="penyebabKegagalan" rows="3" name="penyebab_kegagalan"></textarea>
                     </div>
                 </div>
                 <div class="button-wrapper d-flex justify-content-end">
-                    <button type="submit" class="btn btn-outline-secondary">Tambah respon kegagalan</button>
+                    <button type="" class="btn btn-outline-secondary">Tambah respon kegagalan</button>
                     <button type="submit" class="btn btn-primary btn-submit">Submit</button>
                 </div>
                 
