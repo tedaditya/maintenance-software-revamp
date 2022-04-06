@@ -10,8 +10,9 @@
 
 <body>
     <div class="wrapper">
+        <h2>DATA TABEL FMEA</h2>
         <table class="table table-hover">
-            <thead class="table-light">
+            <thead class="table-light align-middle">
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Komponen</th>
@@ -36,10 +37,10 @@
                     <td><%= data[i].potensi_kegagalan%></td>
                     <td><%= data[i].efek_kegagalan%></td>
                     <td><%= data[i].penyebab_kegagalan%></td>
-                    <td><%= data[i].severity%></td>
-                    <td><%= data[i].occurence%></td>
-                    <td><%= data[i].detection%></td>
-                    <td><%= data[i].spn%></td>
+                    <td class="text-center"><%= data[i].severity%></td>
+                    <td class="text-center"><%= data[i].occurence%></td>
+                    <td class="text-center"><%= data[i].detection%></td>
+                    <td class="text-center"><%= data[i].spn%></td>
                     <!-- <td>
                         <a class="btn btn-success edit" href="../users/edit/<%=data[i].id%>">Edit</a>
                     </td> -->

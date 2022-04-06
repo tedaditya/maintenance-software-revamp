@@ -19,35 +19,33 @@
     <section class="wrapper">
         <h2>FMEA MEKANIK</h2>
         <div>
-            <form action="">
+            <% if (messages.success) { %>
+                <p class="alert alert-success m2-4 mb-2"><%- messages.success %></p>
+                <% } %>
+            <form action="/fmeaMekanik" method="POST">
                 <div class="mb-3">
-                    <label for="komponenDataList" class="form-label">Komponen</label>
+                    <label for="komponenDataList" class="form-label">ID Komponen</label>
                     <input class="form-control" list="datalistOptions" id="komponenDataList"
-                        placeholder="Pilih komponen">
+                        placeholder="Pilih komponen" name="komponen">
+                    <% if(data.length){ var selector = '';
+                        for(var i = 0; i< data.length; i++) { %>
                     <datalist id="datalistOptions">
-                        <option value="Casing">
-                        <option value="Nozzle">
-                        <option value="Rotor">
-                        <option value="Diaphragm">
-                        <option value="Labyrinth Seals">
-                        <option value="Motor Turning Gear">
-                        <option value="Coupling">
-                        <option value="Blade">
-                        <option value="Thurst Bearing">
-                        <option value="Journal Bearing">
+                        <option value="<%=data[i].id %>">
+                            <% }
+                        }%>
                     </datalist>
                 </div>
                 <div class="mb-3">
-                    <label for="potensiKegagalan" class="form-label">Severity</label>
-                    <input type="number" class="form-control" id="potensiKegagalan">
+                    <label for="severity" class="form-label">Severity</label>
+                    <input type="number" class="form-control" id="severity" name="severity">
                 </div>
                 <div class="mb-3">
-                    <label for="potensiKegagalan" class="form-label">Occurence</label>
-                    <input type="number" class="form-control" id="potensiKegagalan">
+                    <label for="occurence" class="form-label">Occurence</label>
+                    <input type="number" class="form-control" id="occurence" name="occurence">
                 </div>
                 <div class="mb-3">
-                    <label for="potensiKegagalan" class="form-label">Detection</label>
-                    <input type="number" class="form-control" id="potensiKegagalan">
+                    <label for="detection" class="form-label">Detection</label>
+                    <input type="number" class="form-control" id="detection" name="detection">
                 </div>
 
                 <div class="button-wrapper d-flex justify-content-end">
