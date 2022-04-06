@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/fmeaData.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Komponen</th>
+                    <th scope="col">Fungsi</th>
+                    <th scope="col">Potensi Kegagalan</th>
+                    <th scope="col">Efek Kegagalan</th>
+                    <th scope="col">Penyebab Kegagalan</th>
+                    <th scope="col">Severity</th>
+                    <th scope="col">Occurence</th>
+                    <th scope="col">Detection</th>
+                    <th scope="col">RPN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data.length){
+                for(var i = 0; i< data.length; i++) {%>
+                <tr>
+                    
+                    <td><%= data[i].id%></td>
+                    <td><%= data[i].komponen%></td>
+                    <td><%= data[i].fungsi%></td>
+                    <td><%= data[i].potensi_kegagalan%></td>
+                    <td><%= data[i].efek_kegagalan%></td>
+                    <td><%= data[i].penyebab_kegagalan%></td>
+                    <td><%= data[i].severity%></td>
+                    <td><%= data[i].occurence%></td>
+                    <td><%= data[i].detection%></td>
+                    <td><%= data[i].spn%></td>
+                    <!-- <td>
+                        <a class="btn btn-success edit" href="../users/edit/<%=data[i].id%>">Edit</a>
+                    </td> -->
+                </tr>
+                <% }
+                            
+                }else{ %>
+                <tr>
+                    <td colspan="3">No user</td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

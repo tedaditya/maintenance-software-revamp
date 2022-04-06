@@ -1,3 +1,16 @@
-exports.index = (req, res) => {
-    res.render('dashboard');
-}
+var db = require('../database');
+
+exports.index = (req, res, next) => {
+    db.query('SELECT * FROM fmea ORDER BY id asc', function (err, rows) {
+
+        if (err) {
+            req.flash('error', err);
+            res.render('dashboard', { data: '' });
+        } else {
+
+            res.render('dashboard', { data: rows });
+        }
+
+    });
+
+};
