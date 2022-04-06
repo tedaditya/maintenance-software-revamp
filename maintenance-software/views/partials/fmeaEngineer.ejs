@@ -20,13 +20,19 @@
         <h2>FMEA ENGINEER</h2>
         <div>
             <% if (messages.success) { %>
-                <p class="alert alert-success m2-4 mb-2"><%- messages.success %></p>
-            <% } %>  
-            <form action="/dashboard/fmeaEngineer/" method="POST">
+            <p class="alert alert-success m2-4 mb-2"><%- messages.success %></p>
+            <% } %>
+            <form action="/fmeaEngineer" method="POST">
                 <div class="mb-3">
                     <label for="komponenDataList" class="form-label">Komponen</label>
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select> -->
                     <input class="form-control" list="datalistOptions" id="komponenDataList"
-                        placeholder="Pilih komponen" name="list_komponen">
+                        placeholder="Pilih komponen" name="komponen">
                     <datalist id="datalistOptions">
                         <option value="Casing">
                         <option value="Nozzle">
@@ -55,14 +61,15 @@
                     </div>
                     <div class="mb-3">
                         <label for="penyebabKegagalan" class="form-label">Penyebab kegagalan</label>
-                        <textarea class="form-control" id="penyebabKegagalan" rows="3" name="penyebab_kegagalan"></textarea>
+                        <textarea class="form-control" id="penyebabKegagalan" rows="3"
+                            name="penyebab_kegagalan"></textarea>
                     </div>
                 </div>
                 <div class="button-wrapper d-flex justify-content-end">
                     <button type="" class="btn btn-outline-secondary">Tambah respon kegagalan</button>
                     <button type="submit" class="btn btn-primary btn-submit">Submit</button>
                 </div>
-                
+
             </form>
         </div>
     </section>

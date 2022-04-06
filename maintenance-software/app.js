@@ -4,13 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var flash = require('express-flash');
 var session = require('express-session');
+var flash = require('express-flash');
 
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var dashboardRouter = require('./routes/dashboard');
+var fmeaEngineerRouter = require('./routes/fmeaEngineer');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use(flash());
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/dashboard', dashboardRouter);
+app.use('/fmeaEngineer', fmeaEngineerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
