@@ -12,6 +12,7 @@ var loginRouter = require('./routes/login');
 var dashboardRouter = require('./routes/dashboard');
 var fmeaEngineerRouter = require('./routes/fmeaEngineer');
 var fmeaMekanikRouter = require('./routes/fmeaMekanik');
+var ttfTtrRouter = require('./routes/ttfTtr');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/login', loginRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/fmeaEngineer', fmeaEngineerRouter);
 app.use('/fmeaMekanik', fmeaMekanikRouter);
+app.use('/ttfTtr', ttfTtrRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
