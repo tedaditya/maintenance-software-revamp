@@ -25,27 +25,19 @@
             <form action="/fmeaMekanik" method="POST">
                 <div class="mb-3">
                     <label for="komponenDataList" class="form-label">ID Komponen</label>
-                    <input class="form-control" list="datalistOptions" id="komponenDataList"
-                        placeholder="Pilih komponen" name="komponen">
-                    <% if(data.length){ var selector = '';
-                        for(var i = 0; i< data.length; i++) { %>
-                    <datalist id="datalistOptions">
-                        <option value="<%=data[i].id %>">
-                            <% }
-                        }%>
-                    </datalist>
+                    <input type="number" class="form-control" id="komponen" name="komponen" required>  
                 </div>
                 <div class="mb-3">
                     <label for="severity" class="form-label">Severity</label>
-                    <input type="number" class="form-control" id="severity" name="severity">
+                    <input type="number" class="form-control" id="severity" name="severity" required>
                 </div>
                 <div class="mb-3">
                     <label for="occurence" class="form-label">Occurence</label>
-                    <input type="number" class="form-control" id="occurence" name="occurence">
+                    <input type="number" class="form-control" id="occurence" name="occurence" required>
                 </div>
                 <div class="mb-3">
                     <label for="detection" class="form-label">Detection</label>
-                    <input type="number" class="form-control" id="detection" name="detection">
+                    <input type="number" class="form-control" id="detection" name="detection" required>
                 </div>
 
                 <div class="button-wrapper d-flex justify-content-end">

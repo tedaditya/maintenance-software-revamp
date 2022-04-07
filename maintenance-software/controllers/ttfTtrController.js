@@ -1,17 +1,18 @@
 var db = require('../database');
 
 exports.index = (req, res, next) => {
-    db.query('SELECT * FROM fmea ORDER BY id asc', function (err, rows) {
+    var sql = "SELECT * FROM fmea, ttf_ttr WHERE fmea.id = ttf_ttr.id_komponen";
+    db.query(sql, function (err, rows) {
 
-        if (err) {
-            req.flash('error', err);
-            res.render('ttfTtr', { data: '' });
-        } else {
+            if (err) {
+                req.flash('error', err);
+                res.render('ttfTtr', { data: '' });
+            } else {
 
-            res.render('ttfTtr', { data: rows });
-        }
+                res.render('ttfTtr', { data: rows });
+            }
 
-    });
+        });
 
     // db.query('SELECT * FROM ttf_ttr ORDER BY id asc', function (err, rows) {
 

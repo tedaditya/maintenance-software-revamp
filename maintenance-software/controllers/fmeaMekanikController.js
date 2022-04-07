@@ -1,7 +1,7 @@
 var db = require('../database');
 
 exports.index = (req, res, next) => {
-    db.query('SELECT * FROM fmea ORDER BY spn desc', function (err, rows) {
+    db.query('SELECT * FROM fmea ORDER BY id asc', function (err, rows) {
 
         if (err) {
             req.flash('error', err);
